@@ -34,7 +34,7 @@ $ git clone git@github.com:arminms/dash-tutorial.git
 $ cd dash-tutorial
 $ module load cmake gcc/6.4.0 intel/2017.5 openmpi
 $ mkdir build && cd build
-$ cmake -DCMAKE_INSTALL_PREFIX=~ ..
+$ cmake ..
 ```
 
 Then you can see all the available options by:
