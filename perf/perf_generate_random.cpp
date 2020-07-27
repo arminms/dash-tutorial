@@ -12,7 +12,7 @@ namespace
 {
     void GR_MPI_float(benchmark::State &state)
     {
-        dash::Matrix<float, 2> m(state.range(0), state.range(0));
+        dash::Array<float> arr(state.range(0));
 
         std::mt19937 rd(static_cast<uint>(dash::myid()));
         std::uniform_real_distribution<float> dist(0, 1);
@@ -24,8 +24,8 @@ namespace
             auto start = std::chrono::high_resolution_clock::now();
 
             // The unit of code we want to benchmark
-            std::generate(m.lbegin(), m.lend(), [&] () { return dist(rd); });
-            m.barrier();
+            std::generate(arr.lbegin(), arr.lend(), [&] () { return dist(rd); });
+            arr.barrier();
 
             auto end = std::chrono::high_resolution_clock::now();
             // Now get the max time across all procs:
@@ -41,7 +41,7 @@ namespace
 
 BENCHMARK(GR_MPI_float)
 ->  RangeMultiplier(2)
-->  Range(1<<10, 1<<14)
+->  Range(1<<20, 1<<24)
 ->  Unit(benchmark::kMillisecond)
 ->  UseManualTime();
 
