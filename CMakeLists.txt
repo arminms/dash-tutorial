@@ -24,3 +24,4 @@ if(${DRBF_BUILD_BENCHMARKS})
   add_subdirectory(perf)
 endif()
 
+add_subdirectory(example)
