@@ -1,5 +1,6 @@
 set(BENCHMARKS
   generate_random
+  sort
 )
 
 foreach(BENCHMARK ${BENCHMARKS})

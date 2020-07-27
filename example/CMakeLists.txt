@@ -3,6 +3,7 @@ set(PROGS
   global
   local
   generate_random
+  sort
 )
 
 foreach(PROG ${PROGS})
