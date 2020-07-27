@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <cmath>
 
 #include <libdash.h>
 
@@ -6,9 +8,14 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
+    int N = 100;
+
     dash::init(&argc, &argv);
 
-    dash::Array<int> arr(512);
+    if (argc > 1)
+        N = stoi(argv[1]);
+
+    dash::Array<int> arr(N);
     auto myid = dash::myid();
 
     for(auto i = 0; i < arr.lsize(); ++i)
@@ -18,8 +25,15 @@ int main(int argc, char* argv[])
 
     if (dash::myid() == 0)
     {
-        for (auto val : arr)
-            cout << static_cast<int>(val) << " ";
+        int color = 9;
+        cout << "N = " << N << ", Number of Processes = " << dash::size();
+        for (size_t i = 0; i < arr.size(); ++i)
+        {
+            if (0 == i % size_t(ceil(float(N) / float(dash::size()))))
+                cout << "\033[38;5;" << color++ << "m" << endl;
+            cout << setw(4)
+                 << static_cast<int>(arr[i]);
+        }
         cout << endl;
     }
 

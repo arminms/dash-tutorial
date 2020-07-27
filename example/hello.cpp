@@ -12,7 +12,8 @@ int main(int argc, char* argv[])
     auto size = dash::size();
     gethostname(buf, 100); pid = getpid();
 
-    cout << "'Hello world' from unit "
+    cout << "\033[38;5;" << dash::myid() + 9 << "m"
+         << "'Hello world' from unit "
          << myid
          << " of "
          << size
