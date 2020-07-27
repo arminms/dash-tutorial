@@ -1,0 +1,6 @@
+build*
+*.out
+.vscode
+external/dash/
+external/benchmark/
+

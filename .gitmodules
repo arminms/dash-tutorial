@@ -1,0 +1,6 @@
+[submodule "external/dash"]
+	path = external/dash
+	url = https://github.com/dash-project/dash
+[submodule "external/benchmark"]
+	path = external/benchmark
+	url = https://github.com/google/benchmark
