@@ -21,6 +21,6 @@ if(${DRBF_BUILD_BENCHMARKS})
     HINTS $ENV{HOME} /usr/local /opt /opt/local
   )
   include(external/benchmark.cmake)
-#   add_subdirectory(perf)
+  add_subdirectory(perf)
 endif()
 
