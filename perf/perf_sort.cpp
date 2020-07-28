@@ -10,7 +10,7 @@
 
 namespace
 {
-    void GR_MPI_float(benchmark::State &state)
+    void Sort_MPI_float(benchmark::State &state)
     {
         dash::Array<float> arr(state.range(0));
 
@@ -42,8 +42,8 @@ namespace
     }
 }
 
-BENCHMARK(GR_MPI_float)
-// ->  Arg(1000000000)
+BENCHMARK(Sort_MPI_float)
+// ->  Arg(30000000000)
 ->  RangeMultiplier(2)
 ->  Range(1<<20, 1<<24)
 ->  Unit(benchmark::kMillisecond)
