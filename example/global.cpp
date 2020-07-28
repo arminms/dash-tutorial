@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
     if (dash::myid() == 0)
     {
         int color = 9;
-        cout << "N = " << N << ", Number of Processes = " << dash::size();
+        cout << "N = " << N << ", Number of Units = " << dash::size();
         for (size_t i = 0; i < arr.size(); ++i)
         {
             if (0 == i % size_t(ceil(float(N) / float(dash::size()))))
