@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
             cout << setw(4)
                  << static_cast<int>(arr[i]);
         }
-        cout << endl;
+        cout << "\033[0m" << endl;
     }
 
     dash::finalize();

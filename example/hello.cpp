@@ -21,6 +21,7 @@ int main(int argc, char* argv[])
          << buf
          << " pid="
          << pid
+         << "\033[0m"
          << endl;
 
     dash::finalize();
