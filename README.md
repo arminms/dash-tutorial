@@ -32,7 +32,7 @@ On [Compute Canada](https://www.computecanada.ca/) national platforms (e.g. [gra
 
 ```
 $ cd ~/scratch
-$ git clone git@github.com:arminms/dash-tutorial.git
+$ git clone https://github.com/arminms/dash-tutorial.git
 $ cd dash-tutorial
 $ module load cmake gcc/7.3.0 intel/2018.3 openmpi
 $ mkdir build && cd build && cmake ..
@@ -67,7 +67,7 @@ $ mpirun -n 8 perf/perf_sort_mpi
 ## Submitting as a job
 
 Here is an example script to submit the `sort_mpi` benchmark using `sbatch`
-command: 
+command:
 
 ```
 #!/bin/bash
