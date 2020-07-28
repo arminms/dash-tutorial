@@ -62,7 +62,10 @@ int main(int argc, char* argv[])
     dash::init(&argc, &argv);
 
     if (dash::myid() == 0)
+    {
+        std::cout << "Number of Units = " << dash::size() << std::endl;
         ::benchmark::RunSpecifiedBenchmarks();
+    }
     else
     {
         NullReporter null;
