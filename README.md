@@ -71,9 +71,11 @@ command:
 
 ```
 #!/bin/bash
-#SBATCH --account=cc-debug
+#SBATCH --account=def-account
 #SBATCH --ntasks=16        # number of MPI processes
 #SBATCH --mem-per-cpu=1G   # memory; default unit is megabytes
 #SBATCH --time=0-00:05     # time (DD-HH:MM)
 srun ./perf_sort_mpi
 ```
+
+You just need to set `--account` to a proper value. 
