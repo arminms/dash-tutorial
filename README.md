@@ -1,5 +1,5 @@
 # dash-tutorial
-A project for experimenting with DASH C++ library (http://www.dash-project.org/).
+A project for experimenting with DASH C++ library (http://www.dash-project.org/). You can find a video recording about it on [YouTube](https://www.youtube.com/watch?v=H1LGxHN7Bqk).
 
 ## Building from Source
 
